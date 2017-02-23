@@ -7,6 +7,8 @@ To run: <br />
  2. npm install 
  3. npm start 
 ```
+
+Requirements MongoDB
 <br />
 <br />
 thanks!

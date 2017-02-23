@@ -11,14 +11,15 @@ import ch from 'chalk';
 import { PORT } from './config';
 // Routes import
 import routes from './routes'
+
 // Connecting mongoDB
+import { createUser, findUser } from './models/usermodel';
 const db = mongoose.connection;
 mongoose.connect('mongodb://localhost/test');
 db.on('error', console.error.bind(console, 'connection error: '));
 db.once('open', () => console.log('MongoDB connected!'));
 
-import { createUser, findUser } from './models/usermodel';
-
+createUser({ name: 'jens', password: 'op'})
 // init server
 const app = express();
 console.log('Server is starting...');

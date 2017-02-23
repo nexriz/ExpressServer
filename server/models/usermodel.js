@@ -9,15 +9,19 @@ const account = new Schema({
 		type: String,
 		required: true
 	},
-	created: Date
+	created: {
+		type: Date,
+		default: Date.now
+	}
 })
 
 export const user = mongoose.model('Accounts', account);
+
 
 export const createUser = (data) => {
 	return user.create(data)
 }
 export const findUser = (data) => {
-	const {name, password } = data;
+	const { name, password } = data;
 	return user.find({ name } || { password })
 }
