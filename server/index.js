@@ -1,8 +1,11 @@
 import express from 'express';
 import ch from 'chalk';
 
+import routes from './routes'
+
 const app = express();
 
+app.use(routes)
 app.get('/', (req, res) => {
 	res.send('heej')
 })
