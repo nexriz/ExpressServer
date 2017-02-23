@@ -8,5 +8,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(3000, () => {
-	console.log(ch.blue('Server is running on port ') + ch.white('3000'))
+	console.log(ch.blue('Server is running on port ') + ch.white('3000'));
 })
