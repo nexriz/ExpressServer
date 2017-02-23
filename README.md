@@ -1,7 +1,10 @@
 # ExpressServer
 Just a simple custom boilerplate server
 
-1. To run: 
-⋅⋅1. git clone
-⋅⋅2. npm install
-⋅⋅3. npm start
+To run: <br />
+ 1. git clone <br />
+ 2. npm install <br />
+ 3. npm start <br />
+<br />
+<br />
+thanks!
