@@ -1,4 +1,4 @@
-const config = {
-	PORT: 3000,
+module.exports = {
+	PORT: 3000
 }
-export default config
+
