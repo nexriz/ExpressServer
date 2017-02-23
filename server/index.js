@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 //middleware imoprt
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
@@ -10,6 +11,13 @@ import ch from 'chalk';
 import { PORT } from './config';
 // Routes import
 import routes from './routes'
+// Connecting mongoDB
+const db = mongoose.connection;
+mongoose.connect('mongodb://localhost/test');
+db.on('error', console.error.bind(console, 'connection error: '));
+db.once('open', () => console.log('MongoDB connected!'));
+
+import { createUser, findUser } from './models/usermodel';
 
 // init server
 const app = express();
